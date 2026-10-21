@@ -18,6 +18,7 @@
   }
   * { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
+  html, body { overflow-x: hidden; }
   body {
     margin: 0; background: var(--bg); color: var(--fg);
     font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -34,7 +35,9 @@
   .draft { background: var(--warn-bg); color: var(--warn-fg); border: 1px solid var(--warn-line); border-radius: 12px; padding: 12px 14px; margin: 0 0 1.2rem; font-size: 0.95rem; }
   .ph { background: var(--warn-bg); color: var(--warn-fg); border-radius: 4px; padding: 0 3px; font-weight: 600; }
   .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  table { border-collapse: collapse; width: 100%; min-width: 30rem; font-size: 0.95rem; }
+  table { border-collapse: collapse; width: 100%; table-layout: fixed; font-size: 0.95rem; }
+  th:first-child, td:first-child { width: 32%; }
+  th, td { overflow-wrap: anywhere; }
   th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
   th { background: var(--card); }
   footer { margin-top: 2.5rem; color: var(--muted); font-size: 0.9rem; }
